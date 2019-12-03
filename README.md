@@ -5,11 +5,30 @@ Sale (POS) report from a distributor, process and format the data
 according to Excelta's guidelines, and output a .csv file that can be
 added to the monthly MOSALES spreadsheet.*
 
+> **Note**: This is a **public repository**, but the POS Data Cleaner is
+> designed to process **proprietary information**. Company and customer
+> information must not be included in this program or its documentation.
+
 #### Table of Contents
-*Being rebuilt*
+  - [Program overview](#program-overview)
+  - [Running the program](#running-the-program)
+    - [Download](#download)
+    - [Running as an .exe](#running-as-an-.exe)
+    - [Running from source](#running-from-source)
+    - [Set up parameters](#set-up-parameters)
+  - [How to use the data cleaner](#how-to-use-the-data-cleaner)
+  - [Supporting files](#supporting-files)
+    - [Pattern files](#pattern-files)
+      - [Column Names and Header Rows](#column-names-and-header-rows)
+      - [City and St(ate)](#city-and-st(ate))
+      - [Cost and Ext calculation](#cost-and-ext-calculation)
+      - [Disty target row](#disty-target-row)
+      - [Strip String](#strip-string)
+- [Making Changes](#making-changes)
+  - [Compiling a new executable file](#compiling-a-new-executable-file)
 
 ## Program overview
-This program is written in a single Python file, `cleaner.py`. When
+This program is written in a single Python file, `cleaner.pyw`. When
 executed, the program connects to the Excelta fileserver where it
 retrieves updates to its reference files. It will then allow the user to
 select one or more raw data files to process and, upon completion, save
@@ -28,7 +47,7 @@ to be potentially dangerous. You will likely need to tell Windows to
 once.*
 
 ### Download
-|[Download the latest release](https://github.com/zach-wall/pos-data-cleaner/releases)|
+|[Download the latest release](https://github.com/excelta-corp/pos-data-cleaner/releases)|
 |---|
 
 There is a backup version of the binary and source code from October
@@ -251,7 +270,7 @@ information to confirm that a zip code is American.
 
 > If there is no St column in the raw data, the program will have no way
 > of telling whether a zip code is American, and most territories will
-> be blank as a result. [USA Override]()
+> be blank as a result.
 
 #### Cost and Ext calculation
 Note that there is no data for the Cost column in the above example;
@@ -284,5 +303,5 @@ be used for that will be detailed later.
 
 ## Compiling a new executable file
 Please refer to
-[Creating a binary with PyInstaller](docs/Creating%20a%20binary%20with%20PyInstaller.md)
+[creating a binary with PyInstaller](docs/Creating%20a%20binary%20with%20PyInstaller.md)
 for more information.
