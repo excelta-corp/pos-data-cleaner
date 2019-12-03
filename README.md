@@ -20,7 +20,7 @@ added to the monthly MOSALES spreadsheet.*
   - [Supporting files](#supporting-files)
     - [Pattern files](#pattern-files)
       - [Column Names and Header Rows](#column-names-and-header-rows)
-      - [City and St(ate)](#city-and-st(ate))
+      - [City and St(ate)](#city-and-state))
       - [Cost and Ext calculation](#cost-and-ext-calculation)
       - [Disty target row](#disty-target-row)
       - [Strip String](#strip-string)
@@ -292,8 +292,7 @@ In this example, the distributor is adding -EXC to the end of all of our
 part numbers, which would prevent them from being cross-referenced. By
 adding `-EXC` to the Strip String, `9241E-EXC` becomes `9241E`.
 
-There are several additional features that the Strip String fields can
-be used for that will be detailed later.
+For more on Strip String functionality, view [setting up a new distributor](docs/Setting%20up%20a%20new%20distributor.md).
 
 **The Strip String fields have no effect on Zip, Qty, Cost, or Ext.**
 
