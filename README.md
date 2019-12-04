@@ -98,7 +98,7 @@ what each of those folders is for:
   |`state_abbreviations.csv`|This is a simple reference that allows the program to recognize a state name in addition to its two-letter abbreviation. E.g. "Florida" will work as well as "FL"|
   |`zip3_to_st_str.csv`|This spreadsheet matches the first three numbers of each US zip code to its city and state to help confirm that a five-digit zip code is in the USA.|
 
-> More on the functionality of these files [here](#why-do-we-need-the-state-for territory parsing?).
+> More on the functionality of these files [here](#why-do-we-need-the-state-for territory parsing).
 
   Make sure the `fileserver_path_reference` path points to a folder
   containing these two files.
