@@ -127,10 +127,10 @@ Open Excel and type the following exactly:
 **10**|Disty||
 
 When you're done, save this file as a UTF-8 CSV where the other pattern files
- are kept. Set the filename to the raw data filename, followed by `_PATTERN.csv
- `. For example
- , we'd
-  save this one as `Bobs Blades_PATTERN.csv`
+ are kept. 
+
+Set the filename to the raw data filename, followed by `_PATTERN.csv`. 
+For example, we'd save this one as `Bobs Blades_PATTERN.csv`
   
 Keep it handy - we'll be right back with it.
 
@@ -170,12 +170,10 @@ Now, we copy the column names from the raw sheet into the "Source" column of the
 **9**|Ext||
 **10**|Disty||
 
-We have left Ext blank, but that's okay because we have Cost and Quantity
-, and the program can do the math. Disty is also left blank, as will usually
+We have left Ext blank, but that's okay because we have Cost and Quantity, and the program can do the math. Disty is also left blank, as will usually
  be the case.
  
-If Bob's Blades had given us a POS file without column names on the first row
-, the pattern file would look like this instead:
+If Bob's Blades had given us a POS file without column names on the first row, the pattern file would look like this instead:
  
   ◢|A|B|C
 -----|---|---|---
@@ -205,14 +203,14 @@ The third column in the pattern file, the Strip String, is used to
 Some distributors add something extra to our part numbers. For example, let's
  say that Bob's Blades had sent us this:
  
-◢|A|B|C|D|E|F|G|H|I
------|---|---|---|---|---|---|---|---|---
+◢|A|B|C|D|E
+-----|---|---|---|---|---
 **1**|Supplier|Item Code|Supplier PN|Cost|....
 **2**|EXCELTA|EKNFCARV|EXC-KNF-CARV|61.00|...
 **3**|EXCELTA|EKNFBREA|EXC-KNF-BREA|71.98|...
 **4**|EXCELTA|EAXEDOUB|EXC-AXE-DOUB|59.78|...
 **5**|EXCELTA|EAXESCAN|EXC-AXE-SCAN|34.16|...
-**...**|...|..|...|...|...|...|...|...|...
+**...**|...|..|...|...|...
 
 Our part numbers in the "Supplier PN" column have been altered; `EXC-` has been
  added to the beginning of each part. This prevents the program from
