@@ -24,7 +24,6 @@ added to the monthly MOSALES spreadsheet.*
       - [Cost and Ext calculation](#cost-and-ext-calculation)
       - [Disty target row](#disty-target-row)
       - [Strip String](#strip-string)
-- [Making Changes](#making-changes)
   - [Compiling a new executable file](#compiling-a-new-executable-file)
 
 ## Program overview
@@ -62,7 +61,7 @@ normal.
 >Unless you need to run the program from source, please skip ahead to
 >the [set up parameters](#set-up-parameters) section.
  
-If you would like to run `cleaner.py` from source, you will need to
+If you would like to run `cleaner.pyw` from source, you will need to
 [install Python 3](https://www.python.org/), then use the package
 manager to [install Pandas](http://pandas.pydata.org). The other modules
 that the program uses, `tkinter`, `os`, `re`, `glob`, `time` and
@@ -98,7 +97,7 @@ what each of those folders is for:
   |`state_abbreviations.csv`|This is a simple reference that allows the program to recognize a state name in addition to its two-letter abbreviation. E.g. "Florida" will work as well as "FL"|
   |`zip3_to_st_str.csv`|This spreadsheet matches the first three numbers of each US zip code to its city and state to help confirm that a five-digit zip code is in the USA.|
 
-> More on the functionality of these files [here](#why-do-we-need-the-state-for territory parsing).
+> More on the functionality of these files [here](#why-do-we-need-the-state-for-territory-parsing).
 
   Make sure the `fileserver_path_reference` path points to a folder
   containing these two files.
@@ -297,8 +296,9 @@ Bretagne, İzmir, and Durango fail that test and are assigned international
  territories, while AL and Alabama (synonymous thanks to `state_abbreviations.csv`), 
  pass the test and are assigned our USA territory for that region.
  
->If the USA ONLY checkbox was checked on this file, the lines bound for France, 
->Turkey and Mexico would all be assigned our Alabama territory.
+**If the USA ONLY checkbox was checked on this file, the lines bound for
+ France, 
+Turkey and Mexico would all be assigned our Alabama territory.**
 
 #### Cost and Ext calculation
 Note that there is no data for the Cost column in the above example;
@@ -323,10 +323,6 @@ adding `-EXC` to the Strip String, `9241E-EXC` becomes `9241E`.
 For more on Strip String functionality, view [setting up a new distributor](docs/Setting%20up%20a%20new%20distributor.md).
 
 **The Strip String fields have no effect on Zip, Qty, Cost, or Ext.**
-
-# Making Changes
-
-*This section is in progress* 
 
 ## Compiling a new executable file
 Please refer to
