@@ -228,7 +228,7 @@ Our part numbers in the "Supplier PN" column have been altered; `EXC-` has been
 **3**|City|Ship City|
 **4**|St|Ship State|
 **5**|Zip|Ship Zip|
-**6**|Item|Supplier PN|`EXC-`
+**6**|Item|Supplier PN|EXC-
 **7**|Qty|Qty Sold|
 **8**|Cost|Cost|
 **9**|Ext||
@@ -282,6 +282,10 @@ For example if we got this from Bob's Blades:
 We could use the strip string `>>_` to delete the underscore character and
  everything following it, returning these part numbers to their original form.
  
+ Likewise, left angle brackets can be used to delete things to the left of
+  the term: 
+ `39893_AXE-SCAN` stripped by the term `<<_` will result in `AXE-SCAN`.
+ 
 ### All together now
 One of our distributors gives us our part numbers like this:
 
@@ -297,8 +301,8 @@ One of our distributors gives us our part numbers like this:
 While this may seem like a lost cause, the following typed into the Strip
  String field will give us workable part numbers: `>> |vpd_`
  
- Multiple exterminators and regular terms can be strung together, allowing
-  you to modify each value to a great degree.
+ Multiple exterminators and regular strip string terms can be strung together, allowing
+  you to modify these values to a great degree.
  
 ### Using strip strings to fix stylized reports
 Occasionally, we will receive a POS report that has been formatted or styled in a
@@ -327,7 +331,7 @@ However, we can perform a trick:
 **3**|City|Ship City|
 **4**|St|Ship State|
 **5**|Zip|Ship Zip|
-**6**|Item|Supplier PN|`>>=`
+**6**|Item|Supplier PN|>>=
 **7**|Qty|Qty Sold|
 **8**|Cost|Cost|
 **9**|Ext||

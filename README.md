@@ -98,6 +98,8 @@ what each of those folders is for:
   |`state_abbreviations.csv`|This is a simple reference that allows the program to recognize a state name in addition to its two-letter abbreviation. E.g. "Florida" will work as well as "FL"|
   |`zip3_to_st_str.csv`|This spreadsheet matches the first three numbers of each US zip code to its city and state to help confirm that a five-digit zip code is in the USA.|
 
+> More on the functionality of these files [here](#why-do-we-need-the-state-for territory parsing?).
+
   Make sure the `fileserver_path_reference` path points to a folder
   containing these two files.
 * The **patterns** folder contains a group of small files typically
@@ -271,6 +273,32 @@ information to confirm that a zip code is American.
 > If there is no St column in the raw data, the program will have no way
 > of telling whether a zip code is American, and most territories will
 > be blank as a result.
+
+##### Why do we need the State for territory parsing?
+The following table is using correct postal codes:
+
+City|State|Zip
+----|-----|---
+Janzé|Bretagne|35150
+İzmir|İzmir|35150
+Ciudad Lerdo|Durango|35150
+Taladega Springs|AL|35150
+Taladega Springs|Alabama|35150
+
+**Janzé in France, İzmir in Turkey, Ciudad Lerdo in Mexico, and Taladega
+ Springs in Alabama all use zip code 35150.** 
+ 
+When the parser comes across any non-Canadian
+  zip code, it uses the `zip3_to_st_str.csv` file to determine that zip codes
+   starting with 351 belong in the state of Alabama, and checks the St column
+    to test each field.
+   
+Bretagne, İzmir, and Durango fail that test and are assigned international
+ territories, while AL and Alabama (synonymous thanks to `state_abbreviations.csv`), 
+ pass the test and are assigned our USA territory for that region.
+ 
+>If the USA ONLY checkbox was checked on this file, the lines bound for France, 
+>Turkey and Mexico would all be assigned our Alabama territory.
 
 #### Cost and Ext calculation
 Note that there is no data for the Cost column in the above example;
