@@ -137,14 +137,14 @@ Keep it handy - we'll be right back with it.
 ### Linking the raw fields
 Now, let's look at the first few rows of Bob's POS report.
 
-◢|A|B|C|D|E|F|G|H|I
------|---|---|---|---|---|---|---|---|---
-**1**|Supplier|Item Code|Supplier PN|Cost|Qty Sold|Customer|Ship City|Ship State|Ship Zip
-**2**|EXCELTA|EXC-KNFCARV|KNF-CARV|61|1|Sebastian Watson|Scarborough|Ontario|M1B 3E3
-**3**|EXCELTA|EXC-KNFBREA|KNF-BREA|71.98|7|David Allen|Fresno|CA|93706
-**4**|EXCELTA|EXC-AXEDOUB|AXE-DOUB|59.78|14|Grace Peterson|Pueblo|CO|81003
-**5**|EXCELTA|EXC-AXESCAN|AXE-SCAN|34.16|8|Matthew Watson|Anadarko|OK|73005
-**...**|...|..|...|...|...|...|...|...|...
+◢|A|B|C|D|E|F|G|H
+-----|---|---|---|---|---|---|---|---
+**1**|Item Code|Supplier PN|Cost|Qty Sold|Customer|Ship City|Ship State|Ship Zip
+**2**|EXC-KNFCARV|KNF-CARV|61|1|Sebastian Watson|Scarborough|Ontario|M1B 3E3
+**3**|EXC-KNFBREA|KNF-BREA|71.98|7|David Allen|Fresno|CA|93706
+**4**|EXC-AXEDOUB|AXE-DOUB|59.78|14|Grace Peterson|Pueblo|CO|81003
+**5**|EXC-AXESCAN|AXE-SCAN|34.16|8|Matthew Watson|Anadarko|OK|73005
+**...**|...|..|...|...|...|...|...|...
 
 You may notice that, in the above version, we **do have headers** because the
  first row contains the column names. As a result, we'll be using the column
