@@ -518,6 +518,10 @@ def get_date_field():
     today = datetime.datetime.now()
     year = today.year
     month = today.month - 1
+    # In case of January of a new year
+    if int(month) == 0:
+        year = year - 1
+        month = 12
     day = 1
     return str(month) + "/" + str(day) + "/" + str(year)
 
