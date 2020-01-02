@@ -6,7 +6,7 @@ import glob
 import pandas as pd
 import datetime
 from math import ceil
-from PIL import ImageTk, Image
+#from PIL import ImageTk, Image
 
 # Parameter Zone -----------------------------+
 
@@ -455,11 +455,11 @@ tk_frame_top.pack(fill="x", anchor="n")
 # -- Title label and logo
 tk.Label(tk_frame_top, text="Disty POS Data Cleaner", bg="#DDD", fg="#222", font=("Arial", 20), padx=20).pack(side="left")
 
-logo_image = Image.open("excelta-logo.png")
-logo_render = ImageTk.PhotoImage(logo_image)
+#logo_image = Image.open("excelta-logo.png")
+#logo_render = ImageTk.PhotoImage(logo_image)
 
-imagebin = tk.Label(tk_frame_top, image=logo_render, bg="#DDD")
-imagebin.pack(side="right")
+#imagebin = tk.Label(tk_frame_top, image=logo_render, bg="#DDD")
+#imagebin.pack(side="right")
 
 tk_frame_mid = tk.Frame(app, name="f_mid", background="#EEE")
 tk_frame_mid.pack(fill="both", expand=1)
