@@ -322,7 +322,7 @@ adding `-EXC` to the Strip String, `9241E-EXC` becomes `9241E`.
 
 For more on Strip String functionality, view [setting up a new distributor](docs/Setting%20up%20a%20new%20distributor.md).
 
-**The Strip String fields have no effect on Zip, Qty, Cost, or Ext.**
+**The Strip String fields have no effect on Qty, Cost, or Ext.**
 
 ## Compiling a new executable file
 Please refer to

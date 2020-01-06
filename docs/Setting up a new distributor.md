@@ -282,6 +282,11 @@ For example if we got this from Bob's Blades:
 We could use the strip string `>>_` to delete the underscore character and
  everything following it, returning these part numbers to their original form.
  
+This is most frequently used to reduce zip+3 or zip+4 codes to zip5. For
+ example, 
+`56619-022` will produce an error, so we use the exterminator `>>-` in the
+ strip string field for Zip, and we should get `56619` in the output file.
+ 
  Likewise, left angle brackets can be used to delete things to the left of
   the term: 
  `39893_AXE-SCAN` stripped by the term `<<_` will result in `AXE-SCAN`.
