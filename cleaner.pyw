@@ -394,7 +394,8 @@ def active_ui_setup(dataframe_to_process):
 
     tk.Label(tk_frame_display, text="|░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░|").pack(anchor="w")  #48
     for row in dataframe_to_process.itertuples():
-        me = tk.Label(tk_frame_display, name=row.Disty.lower(), text=row.Disty)
+        disty_path_friendly_name = row.Disty.lower().replace(".", "")
+        me = tk.Label(tk_frame_display, name=disty_path_friendly_name, text=row.Disty)
         me.pack(anchor="w")
 
 
@@ -406,7 +407,8 @@ def active_process_started(dataframe_to_process):
     for row in dataframe_to_process.itertuples():
         result = process_file(row.File, row.Pattern, row.Disty, row.USA)
 
-        path_to_disty_label = ".!window.f_mid.f_mid_right.f_display." + row.Disty.lower()
+        disty_path_friendly_name = row.Disty.lower().replace(".", "")
+        path_to_disty_label = ".!window.f_mid.f_mid_right.f_display." + disty_path_friendly_name
         this_disty_result = row.Disty + ": "
 
         if not result:
@@ -651,7 +653,7 @@ def process_file(input_file, pattern_file, disty_name, usa):
             try:
                 data = raw_data[source].astype(str)
             except KeyError:
-                error_log.append([disty_name, "Error reading " + source + " from raw file. Check pattern file."])
+                error_log.append([disty_name, "Error reading " + column_name + ": " + source + " from raw file. Check pattern file."])
                 return False
             # --------- STRIP STRING --------- #
 
