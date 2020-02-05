@@ -29,8 +29,8 @@ of errors, make sure the program runs from source before proceeding.
     ── pos-data-cleaner/
        │
        ├── patterns/
-       │   ├── Allied_PATTERN.csv
-       │   ├── Arbell_PATTERN.csv
+       │   ├── Disty1_PATTERN.csv
+       │   ├── Disty2_PATTERN.csv
        │   └── etc ...
        ├── reference/
        │   ├── fileserver-path.txt
